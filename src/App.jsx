@@ -2,11 +2,28 @@ import { useState } from "react";
 
 export default function App() {
   const [newItem, setNewItem] = useState("");
+  const [todos, setTodos] = useState([]);
+
+  function handleSubmit(e) {
+    // prevent page from refreshing
+    e.preventDefault();
+
+    // set in state: pass a function to modify existing data
+    setTodos((currentTodos) => {
+      return [
+        ...currentTodos,
+        { id: crypto.randomUUID(), title: newItem, completed: false },
+      ];
+    });
+  }
+
+  console.log("todos", todos);
+
   return (
     <>
       <h1>My Wish List</h1>
       <h2>Add Item to Wish List</h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="form-control">
           <label htmlFor="item">New Item</label>
           <input
