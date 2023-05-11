@@ -38,16 +38,22 @@ export default function App() {
       </form>
       <h2>Wish List Items</h2>
       <ul>
-        <li>
-          <input type="checkbox" name="purchasedItem1" id="purchasedItem1" />
-          <label htmlFor="purchasedItem1">Item 1</label>
-          <button type="button">Remove</button>
-        </li>
-        <li>
-          <input type="checkbox" name="purchasedItem2" id="purchasedItem2" />
-          <label htmlFor="purchasedItem2">Item 2</label>
-          <button type="button">Remove</button>
-        </li>
+        {/* loop through items and return as list elements */}
+        {todos.map((todo) => {
+          return (
+            // use a unique key to know which item is changing
+            <li key={todo.id}>
+              <input
+                type="checkbox"
+                checked={todo.completed}
+                name="purchasedItem1"
+                id="purchasedItem1"
+              />
+              <label htmlFor="purchasedItem1">{todo.title}</label>
+              <button type="button">Remove</button>
+            </li>
+          );
+        })}
       </ul>
     </>
   );
