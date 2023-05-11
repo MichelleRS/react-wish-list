@@ -15,9 +15,9 @@ export default function App() {
         { id: crypto.randomUUID(), title: newItem, completed: false },
       ];
     });
+    // clear previous input value
+    setNewItem("");
   }
-
-  console.log("items", items);
 
   return (
     <>
