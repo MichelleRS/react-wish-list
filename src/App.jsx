@@ -59,10 +59,10 @@ export default function App() {
                 type="checkbox"
                 checked={item.completed}
                 onChange={(e) => toggleItem(item.id, e.target.checked)}
-                name="purchasedItem1"
-                id="purchasedItem1"
+                name={item.id}
+                id={item.id}
               />
-              <label htmlFor="purchasedItem1">{item.title}</label>
+              <label htmlFor={item.id}>{item.title}</label>
               <button type="button">Remove</button>
             </li>
           );
