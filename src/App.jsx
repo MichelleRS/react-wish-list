@@ -57,6 +57,10 @@ export default function App() {
       </form>
       <h2>Wish List Items</h2>
       <ul>
+        {/* render message to user if there are no items in wish list  */}
+        {items.length === 0 &&
+          "Your wish list is empty. Use the form to add items to your list."}
+
         {/* loop through items and return as list elements */}
         {items.map((item) => {
           return (
