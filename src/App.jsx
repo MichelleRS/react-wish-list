@@ -1,4 +1,7 @@
+import { useState } from "react";
+
 export default function App() {
+  const [newItem, setNewItem] = useState("");
   return (
     <>
       <h1>My Wish List</h1>
@@ -6,7 +9,13 @@ export default function App() {
       <form>
         <div className="form-control">
           <label htmlFor="item">New Item</label>
-          <input type="text" name="item" id="item" />
+          <input
+            type="text"
+            name="item"
+            id="item"
+            value={newItem}
+            onChange={(e) => setNewItem(e.target.value)}
+          />
         </div>
         <button type="submit">Add</button>
       </form>
