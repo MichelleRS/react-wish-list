@@ -29,9 +29,15 @@ npm run dev
 
 - [Adding locally hosted code to GitHub](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github)
 
+## Fixes
+
+1. Find out best practice for setting values for the input and label attributes: for, name, id, htmlFor
+
 ## Resources
 
 - [Learn React With This One Project.](https://www.youtube.com/watch?v=Rh3tobg7hEo)
+
+  - Timestamp 23:45: when setting state, if you want to use the current value (modify existing data), pass a function. Otherwise, you can pass a value (like the onChange event in input).
 
 ### Official Guides
 
