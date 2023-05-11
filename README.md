@@ -1,0 +1,39 @@
+# React Wish List
+
+## MVP Goal
+
+User can add an item to a wish list, which is saved in their local storage. Item can be checked to show it has been purchased, or removed on button click
+
+## Project Setup
+
+### Getting Started in the Terminal
+
+```
+mkdir react-wish-list
+cd react-wish-list
+npm create vite@latest
+npm i
+npm run dev
+```
+
+- Project name: .
+  - Uses the current directory. Helps to start with an empty folder (ex: no README.md).
+- Select a framework: React
+- Select a variant: JavaScript + SWC
+
+- `npm i` installs dependencies.
+
+- `npm run dev` starts application.
+
+### Add to GitHub
+
+- [Adding locally hosted code to GitHub](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github)
+
+## Resources
+
+- [Learn React With This One Project.](https://www.youtube.com/watch?v=Rh3tobg7hEo)
+
+### Official Guides
+
+- [Learn React.](https://react.dev/learn)
+- [Vite Guide.](https://vitejs.dev/guide/)
