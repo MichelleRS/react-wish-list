@@ -31,6 +31,13 @@ export default function App() {
     });
   }
 
+  // delete item from wish list
+  function deleteItem(id) {
+    setItems((currentItems) => {
+      return currentItems.filter((item) => item.id !== id);
+    });
+  }
+
   return (
     <>
       <h1>My Wish List</h1>
@@ -63,7 +70,9 @@ export default function App() {
                 id={item.id}
               />
               <label htmlFor={item.id}>{item.title}</label>
-              <button type="button">Remove</button>
+              <button type="button" onClick={() => deleteItem(item.id)}>
+                Remove
+              </button>
             </li>
           );
         })}
