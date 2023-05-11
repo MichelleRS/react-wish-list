@@ -2,28 +2,40 @@
 
 ## MVP Goal
 
-User can add an item to a wish list, which is saved in their local storage. Item can be checked to show it has been purchased, or removed on button click
+User can add an item to a wish list, which is saved in their local storage. Item can be checked to show it has been purchased, or removed on button click.
+
+## Project Status
+
+- _MVP in Progress_
 
 ## Project Setup
 
-### Getting Started in the Terminal
+### Start in the Terminal
 
 ```
-mkdir react-wish-list
-cd react-wish-list
-npm create vite@latest
-npm i
-npm run dev
+$ mkdir react-wish-list
+$ cd react-wish-list
+# makes a directory, then steps into it
 ```
 
-- Project name: .
-  - Uses the current directory. Helps to start with an empty folder (ex: no README.md).
-- Select a framework: React
-- Select a variant: JavaScript + SWC
+```
+$ npm create vite@latest
+$ Project name: .
+# Uses the current directory.
+# Helps to start with an empty directory
+$ Select a framework: React
+$ Select a variant: JavaScript + SWC
+```
 
-- `npm i` installs dependencies.
+```
+$ npm i
+# installs dependencies
+```
 
-- `npm run dev` starts application.
+```
+$ npm run dev
+# starts application
+```
 
 ### Add to GitHub
 
