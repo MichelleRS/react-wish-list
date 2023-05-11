@@ -19,6 +19,18 @@ export default function App() {
     setNewItem("");
   }
 
+  // determine if checkbox is checked or not
+  function toggleItem(id, completed) {
+    setItems((currentItems) => {
+      return currentItems.map((item) => {
+        if (item.id === id) {
+          return { ...item, completed };
+        }
+        return item;
+      });
+    });
+  }
+
   return (
     <>
       <h1>My Wish List</h1>
@@ -46,6 +58,7 @@ export default function App() {
               <input
                 type="checkbox"
                 checked={item.completed}
+                onChange={(e) => toggleItem(item.id, e.target.checked)}
                 name="purchasedItem1"
                 id="purchasedItem1"
               />
