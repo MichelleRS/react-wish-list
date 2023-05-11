@@ -2,22 +2,22 @@ import { useState } from "react";
 
 export default function App() {
   const [newItem, setNewItem] = useState("");
-  const [todos, setTodos] = useState([]);
+  const [items, setItems] = useState([]);
 
   function handleSubmit(e) {
     // prevent page from refreshing
     e.preventDefault();
 
     // set in state: pass a function to modify existing data
-    setTodos((currentTodos) => {
+    setItems((currentItems) => {
       return [
-        ...currentTodos,
+        ...currentItems,
         { id: crypto.randomUUID(), title: newItem, completed: false },
       ];
     });
   }
 
-  console.log("todos", todos);
+  console.log("items", items);
 
   return (
     <>
@@ -39,17 +39,17 @@ export default function App() {
       <h2>Wish List Items</h2>
       <ul>
         {/* loop through items and return as list elements */}
-        {todos.map((todo) => {
+        {items.map((item) => {
           return (
             // use a unique key to know which item is changing
-            <li key={todo.id}>
+            <li key={item.id}>
               <input
                 type="checkbox"
-                checked={todo.completed}
+                checked={item.completed}
                 name="purchasedItem1"
                 id="purchasedItem1"
               />
-              <label htmlFor="purchasedItem1">{todo.title}</label>
+              <label htmlFor="purchasedItem1">{item.title}</label>
               <button type="button">Remove</button>
             </li>
           );
