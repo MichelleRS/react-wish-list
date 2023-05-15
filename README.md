@@ -6,7 +6,7 @@ User can add an item to a wish list, which is saved in their local storage. Item
 
 ## Project Status
 
-- _MVP in Progress_
+- MVP complete
 
 ## Project Setup
 
@@ -40,10 +40,6 @@ $ npm run dev
 ### Add to GitHub
 
 - [Adding locally hosted code to GitHub](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github)
-
-## Fixes
-
-1. Find out best practice for setting values for the input and label attributes: for, name, id, htmlFor
 
 ## Resources
 
