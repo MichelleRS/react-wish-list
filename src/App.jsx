@@ -1,8 +1,21 @@
+import { useEffect } from "react";
 import { useState } from "react";
 
 export default function App() {
   const [newItem, setNewItem] = useState("");
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState(() => {
+    // get items from local storage
+    const localValue = localStorage.getItem("ITEMS");
+    // if there are no items in local storage, return an empty array
+    if (localValue == null) return [];
+
+    return JSON.parse(localValue);
+  });
+
+  // store items in local storage any time there is a change to items
+  useEffect(() => {
+    localStorage.setItem("ITEMS", JSON.stringify(items));
+  }, [items]);
 
   function handleSubmit(e) {
     // prevent page from refreshing
